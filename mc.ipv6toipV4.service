@@ -1,0 +1,11 @@
+[Unit]  
+Description=Minecraft server IpV6toIpV4 service  
+  
+[Service]  
+ExecStart=/bin/IpV6toIpV4/IpV6toIpV4 port 25565
+Restart=on-failure  
+SyslogIdentifier=minecraft-server-IpV6toIpV4-service    
+PrivateTmp=true
+  
+[Install]  
+WantedBy=multi-user.target
